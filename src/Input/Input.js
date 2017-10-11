@@ -25,13 +25,13 @@ export default class Input extends Component {
 
   render() {
     return(
-      <div className='input'>
-      <input type='text'
-        className= 'title-input'
-        placeholder='Enter a phrase...'
-        value={this.state.input}
-        onChange={e => this.handleChange(e)}
-        onKeyDown={e => this.handleEnter(e)}/>
+      <div className='input-div'>
+        <input type='text'
+          className= 'input'
+          placeholder='Enter a phrase...'
+          value={this.state.input}
+          onChange={e => this.handleChange(e)}
+          onKeyDown={e => this.handleEnter(e)}/>
       </div>
     )
   }

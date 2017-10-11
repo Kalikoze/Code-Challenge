@@ -15,16 +15,12 @@ const Display = ({ displayValue }) => {
       }).join(' ')
 
       return replaceWords
-    } else if (index === 10) {
-      return value
-    } else {
-      return value
     }
   }
 
   return (
     <div className='display'>
-      {convertEnglish(displayValue)}
+      {convertEnglish(displayValue) || displayValue}
     </div>
   )
 }
