@@ -12,9 +12,14 @@ export default class Input extends Component {
     this.setState({input: e.target.value})
   }
 
+  coolthings() {
+    this.props.submitInput(this.state.input)
+    this.setState({input: ''})
+  }
+
   handleEnter(e) {
     if (e.keyCode === 13) {
-      console.log('fired')
+      this.coolthings()
     }
   }
 
@@ -26,7 +31,7 @@ export default class Input extends Component {
         placeholder='Enter a phrase...'
         value={this.state.input}
         onChange={e => this.handleChange(e)}
-        onKeyDown={this.handleEnter} />
+        onKeyDown={e => this.handleEnter(e)}/>
       </div>
     )
   }
